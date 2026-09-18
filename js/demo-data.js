@@ -11,14 +11,14 @@ function joia(corBase, corDetalhe, brilho = false) {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
     <defs>
       <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#212127"/><stop offset="1" stop-color="#141418"/>
+        <stop offset="0" stop-color="#fdf2fb"/><stop offset="1" stop-color="#f7e4f4"/>
       </linearGradient>
       <radialGradient id="sh" cx="35%" cy="30%" r="70%">
-        <stop offset="0" stop-color="${corBase}" stop-opacity=".9"/>
-        <stop offset="1" stop-color="${corBase}" stop-opacity=".55"/>
+        <stop offset="0" stop-color="${corBase}" stop-opacity=".95"/>
+        <stop offset="1" stop-color="${corBase}" stop-opacity=".65"/>
       </radialGradient>
       <pattern id="mesh" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-        <path d="M0 0V16M0 0H16" stroke="#2b2b33" stroke-width="1.2" fill="none"/>
+        <path d="M0 0V16M0 0H16" stroke="#eccbe6" stroke-width="1.2" fill="none"/>
       </pattern>
     </defs>
     <rect width="400" height="400" fill="url(#bg)"/>

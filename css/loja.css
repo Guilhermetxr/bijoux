@@ -1,28 +1,30 @@
 /* ============================================================
    CATÁLOGO — estilos da loja
-   Paleta escura + vermelho de destaque (referência do cliente)
+   Paleta clara + roxo/rosa vibrante (referência: @millabeauty_6
+   no Instagram — bio com 💜, fotos de produto em fundo claro,
+   grafismos informativos, tom descontraído e de bazar/preço baixo)
    Mobile-first: tudo é desenhado para o celular e cresce daí.
    ============================================================ */
 
 :root {
   /* superfícies */
-  --bg: #0b0b0d;
-  --bg-2: #101013;
-  --surface: #17171c;
-  --surface-2: #1f1f26;
-  --line: rgba(255, 255, 255, 0.08);
-  --line-2: rgba(255, 255, 255, 0.14);
+  --bg: #fef8fc;
+  --bg-2: #f7ecf6;
+  --surface: #ffffff;
+  --surface-2: #f3e2f1;
+  --line: rgba(123, 31, 130, 0.14);
+  --line-2: rgba(123, 31, 130, 0.26);
 
   /* texto */
-  --txt: #f4f4f6;
-  --txt-2: #a3a3ad;
-  --txt-3: #6c6c78;
+  --txt: #2b1330;
+  --txt-2: #6e5473;
+  --txt-3: #a08ba3;
 
   /* marca */
-  --brand: #d8ad3f;       /* dourado — cor de destaque/ação */
-  --brand-2: #f0c552;     /* dourado mais claro (hover) */
-  --brand-ink: #2a1e04;   /* texto escuro para usar SOBRE o dourado */
-  --gold: #f6c344;
+  --brand: #9c1fb0;       /* roxo — cor de destaque/ação */
+  --brand-2: #c2299e;     /* rosa-roxo mais vivo (hover) */
+  --brand-ink: #ffffff;   /* texto claro para usar SOBRE a marca */
+  --gold: #ff2e87;        /* rosa vibrante — estrelas, destaques */
   --wa: #25d366;
 
   /* medidas */
@@ -74,15 +76,15 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* ---------- scrollbar discreta ---------- */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: #2b2b33; border-radius: 20px; border: 3px solid var(--bg); }
-::-webkit-scrollbar-thumb:hover { background: #3a3a44; }
+::-webkit-scrollbar-thumb { background: #e3cbe0; border-radius: 20px; border: 3px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover { background: #d1a8ce; }
 
 /* ============================================================
    TOPO — faixa de avisos + header
    ============================================================ */
 
 .topbar {
-  background: #000;
+  background: var(--brand);
   border-bottom: 1px solid var(--line);
   overflow: hidden;
   height: 34px;
@@ -103,7 +105,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-weight: 800;
   font-size: 12px;
   letter-spacing: 0.06em;
-  color: var(--txt);
+  color: #fff;
 }
 
 .topbar__track span::before {
@@ -111,9 +113,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   display: inline-block;
   width: 5px; height: 5px;
   border-radius: 50%;
-  background: var(--brand);
+  background: #fff;
   margin-right: 10px;
   vertical-align: middle;
+  opacity: 0.85;
 }
 
 @keyframes marquee {
@@ -129,7 +132,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   top: 0;
   z-index: 60;
   height: var(--hdr-h);
-  background: rgba(11, 11, 13, 0.88);
+  background: rgba(254, 248, 252, 0.86);
   backdrop-filter: saturate(160%) blur(14px);
   border-bottom: 1px solid var(--line);
 }
@@ -342,7 +345,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   padding: 38px 0 30px;
   border-bottom: 1px solid var(--line);
   background:
-    radial-gradient(120% 90% at 50% 0%, rgba(216, 173, 63, 0.15), transparent 62%),
+    radial-gradient(120% 90% at 50% 0%, rgba(156, 31, 176, 0.14), transparent 60%),
+    radial-gradient(80% 60% at 100% 0%, rgba(255, 46, 135, 0.08), transparent 60%),
     var(--bg);
   overflow: hidden;
 }
@@ -496,11 +500,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   top: 38%;
   width: 42px; height: 42px;
   border-radius: 50%;
-  background: rgba(20, 20, 24, 0.92);
+  background: var(--surface);
+  color: var(--txt);
   border: 1px solid var(--line-2);
+  box-shadow: var(--shadow);
   place-items: center;
   z-index: 5;
-  transition: background 0.16s var(--ease);
+  transition: background 0.16s var(--ease), color 0.16s var(--ease);
 }
 .rail__nav:hover { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
 .rail__nav svg { width: 18px; height: 18px; }
@@ -824,7 +830,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   transition: all 0.16s var(--ease);
 }
 .size:hover { border-color: var(--txt-3); }
-.size.is-active { background: var(--txt); color: #0b0b0d; border-color: var(--txt); }
+.size.is-active { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
 
 .prod__desc {
   color: var(--txt-2);
@@ -966,9 +972,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 /* aviso de configuração pendente (modo demonstração) */
 .demobar {
-  background: #2a1d05;
-  border-bottom: 1px solid #4a3410;
-  color: #f3c969;
+  background: #fde6f5;
+  border-bottom: 1px solid #f3b8e0;
+  color: #7a1258;
   font-size: 12.5px;
   padding: 9px var(--pad);
   text-align: center;

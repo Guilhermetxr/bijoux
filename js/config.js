@@ -31,19 +31,19 @@ export const DEMO_SENHA = "bijoux123";
 
 /* Valores usados quando ainda não há nada salvo em "config/loja". */
 export const CONFIG_PADRAO = {
-  nome: "Bijoux",
-  slogan: "Bijuterias e acessórios — atacado e varejo",
-  whatsapp: "5511999999999", // formato: 55 + DDD + número (só dígitos)
+  nome: "Millabeauty",
+  slogan: "Maquiagem, cosméticos e acessórios",
+  whatsapp: "5511999999999", // formato: 55 + DDD + número (só dígitos) — trocar pelo WhatsApp real
   mensagemPadrao: "Olá! Vi o catálogo e queria saber mais sobre:",
-  instagram: "",
+  instagram: "https://instagram.com/millabeauty_6",
   avisos: [
-    "ENVIO PARA TODO O BRASIL",
+    "DELIVERY PARA TODA SÃO LUÍS",
     "PAGUE COM PIX E GANHE DESCONTO",
     "ATACADO A PARTIR DE 5 PEÇAS",
   ],
   heroTitulo: "Coleção 2026",
   heroTexto:
-    "Colares, brincos, anéis, pulseiras e conjuntos. Escolha a peça e fale com a gente no WhatsApp.",
+    "Colares, brincos, anéis, pulseiras e conjuntos. Escolha a peça e fale com a gente no WhatsApp — delivery para toda São Luís.",
   rodapeTexto:
     "Catálogo digital. Preços e disponibilidade sujeitos a alteração — confirme no WhatsApp antes de fechar o pedido.",
 };

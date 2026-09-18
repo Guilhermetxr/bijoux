@@ -292,7 +292,7 @@ function ligarInteracoes() {
 
 export const perks = `
   <div class="perks">
-    <div class="perk">${ico.caminhao}<b>Envio Brasil</b><span>Rastreio em todos os pedidos</span></div>
+    <div class="perk">${ico.caminhao}<b>Delivery São Luís</b><span>Entrega rápida na cidade</span></div>
     <div class="perk">${ico.pix}<b>Pix, cartão e boleto</b><span>Parcelamos sua compra</span></div>
     <div class="perk">${ico.medalha}<b>Qualidade premium</b><span>Banho antialérgico e durável</span></div>
     <div class="perk">${ico.escudo}<b>Compra segura</b><span>Atendimento humano no zap</span></div>

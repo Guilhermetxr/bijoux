@@ -339,7 +339,7 @@ function comprimir(arquivo, maxLado, qualidade) {
         cv.width = l;
         cv.height = a;
         const ctx = cv.getContext("2d");
-        ctx.fillStyle = "#17171c"; // fundo para imagens com transparência
+        ctx.fillStyle = "#ffffff"; // fundo para imagens com transparência
         ctx.fillRect(0, 0, l, a);
         ctx.drawImage(img, 0, 0, l, a);
         ok(cv.toDataURL("image/jpeg", qualidade));

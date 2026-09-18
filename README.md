@@ -1,6 +1,7 @@
-# Catálogo de Bijuterias — Bijoux
+# Catálogo de Bijuterias — Millabeauty
 
-Catálogo digital para loja de bijuterias e acessórios. O cliente navega por seções,
+Catálogo digital para a Millabeauty (@millabeauty_6), loja de bijuterias e
+acessórios com delivery em São Luís. O cliente navega por seções,
 abre o produto e finaliza o pedido **no WhatsApp** — não há carrinho nem checkout.
 A dona da loja cadastra e edita tudo por um painel próprio, sem mexer em código.
 

@@ -15,7 +15,7 @@ body.admin { background: var(--bg); }
   place-items: center;
   padding: 24px 18px;
   background:
-    radial-gradient(90% 60% at 50% 0%, rgba(216, 173, 63, 0.13), transparent 60%),
+    radial-gradient(90% 60% at 50% 0%, rgba(156, 31, 176, 0.12), transparent 60%),
     var(--bg);
 }
 
@@ -64,7 +64,7 @@ body.admin { background: var(--bg); }
   position: sticky;
   top: 0;
   z-index: 30;
-  background: rgba(11, 11, 13, 0.92);
+  background: rgba(254, 248, 252, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
@@ -200,7 +200,7 @@ textarea.inp { min-height: 110px; resize: vertical; line-height: 1.55; }
   font-weight: 600;
   transition: all 0.15s var(--ease);
 }
-.tamanho.is-on { background: var(--txt); color: #0b0b0d; border-color: var(--txt); }
+.tamanho.is-on { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
 
 /* upload de imagem */
 .dropzone {
@@ -213,7 +213,7 @@ textarea.inp { min-height: 110px; resize: vertical; line-height: 1.55; }
   cursor: pointer;
   transition: all 0.18s var(--ease);
 }
-.dropzone:hover, .dropzone.is-over { border-color: var(--brand); color: var(--txt-2); background: rgba(216, 173, 63, 0.06); }
+.dropzone:hover, .dropzone.is-over { border-color: var(--brand); color: var(--txt-2); background: rgba(156, 31, 176, 0.06); }
 .dropzone svg { width: 26px; height: 26px; margin-bottom: 8px; color: var(--txt-3); }
 .dropzone b { color: var(--txt); display: block; font-size: 14px; margin-bottom: 3px; }
 
