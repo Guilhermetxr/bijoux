@@ -163,7 +163,7 @@ export async function montarLayout({ ativo = "" } = {}) {
         <button class="iconbtn" id="abrirMenu" aria-label="Abrir menu">${ico.menu}</button>
         <button class="iconbtn" id="abrirBusca" aria-label="Buscar">${ico.busca}</button>
         <a class="hdr__logo" href="index.html">
-          <span class="hdr__mark">${ico.logo}</span>
+          <span class="hdr__mark"><img src="img/logo.png" alt=""></span>
           <span class="hdr__name">${esc(cfg.nome)}</span>
         </a>
         <nav class="hdr__nav">
@@ -218,12 +218,6 @@ export async function montarLayout({ ativo = "" } = {}) {
         <div class="foot__brand">
           <h4>${esc(cfg.nome)}</h4>
           <p>${esc(cfg.rodapeTexto || "")}</p>
-        </div>
-        <div>
-          <h4>Categorias</h4>
-          <ul>${categorias
-            .map((c) => `<li><a href="categoria.html?c=${esc(c.slug)}">${esc(c.nome)}</a></li>`)
-            .join("")}</ul>
         </div>
         <div>
           <h4>Atendimento</h4>

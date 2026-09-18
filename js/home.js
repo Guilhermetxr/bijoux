@@ -23,11 +23,6 @@ async function iniciar() {
   $("#heroWhats").href = linkWhats(cfg);
   $("#heroWhats").innerHTML = `${ico.whats} Falar no WhatsApp`;
 
-  /* ---------- atalhos para as seções ---------- */
-  $("#chips").innerHTML = categorias
-    .map((c) => `<a class="chip" href="#sec-${esc(c.slug)}">${esc(c.nome)}</a>`)
-    .join("");
-
   /* ---------- esqueleto das seções (evita o "pulo" do layout) ---------- */
   const alvo = $("#secoes");
   alvo.innerHTML = categorias
@@ -90,9 +85,6 @@ async function iniciar() {
   }
 
   $("#faixaPerks").outerHTML = perks;
-
-  /* ---------- destaque do chip conforme a rolagem ---------- */
-  observarSecoes();
 }
 
 /** Deixa a última palavra do título em vermelho — dá ritmo à manchete. */
@@ -121,23 +113,6 @@ function ligarRail(track) {
   };
   track.addEventListener("scroll", atualizar, { passive: true });
   atualizar();
-}
-
-function observarSecoes() {
-  const chips = [...document.querySelectorAll(".chip")];
-  const secoes = [...document.querySelectorAll(".section[id]")];
-  if (!chips.length || !("IntersectionObserver" in window)) return;
-
-  const io = new IntersectionObserver(
-    (entradas) => {
-      entradas.forEach((e) => {
-        if (!e.isIntersecting) return;
-        chips.forEach((c) => c.classList.toggle("is-active", c.getAttribute("href") === "#" + e.target.id));
-      });
-    },
-    { rootMargin: "-30% 0px -60% 0px" }
-  );
-  secoes.forEach((s) => io.observe(s));
 }
 
 iniciar().catch((e) => {

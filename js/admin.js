@@ -29,8 +29,8 @@ const TAMANHOS_SUGERIDOS = ["Único", "12", "14", "16", "18", "20", "22", "24", 
    LOGIN
    ============================================================ */
 
-$("#loginMark").innerHTML = ico.logo;
-$("#admLogo").innerHTML = ico.logo + "<span>Painel da loja</span>";
+$("#loginMark").innerHTML = `<img src="img/logo.png" alt="">`;
+$("#admLogo").innerHTML = `<img src="img/logo.png" alt=""><span>Painel da loja</span>`;
 
 if (MODO_DEMO) {
   $("#loginSub").innerHTML =
