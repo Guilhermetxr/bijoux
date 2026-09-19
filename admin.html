@@ -102,45 +102,61 @@
         <div class="painel__head">
           <div>
             <h2>Dados da loja</h2>
-            <p>Nome, WhatsApp e os textos que aparecem no site.</p>
+            <p>Tudo o que aparece no site. Cada bloco diz onde o texto é mostrado.</p>
           </div>
         </div>
 
-        <form class="form" id="formLoja" style="max-width:760px">
-          <div class="form__row form__row--2">
-            <label class="f"><span>Nome da loja</span><input class="inp" id="cfgNome"></label>
+        <form class="form form--loja" id="formLoja">
+
+          <section class="grupo">
+            <h3 class="grupo__titulo">Contato e WhatsApp</h3>
+            <p class="grupo__desc">Como o cliente fala com você. O botão de WhatsApp do site usa estes dados.</p>
+            <div class="form__row form__row--2">
+              <label class="f"><span>Nome da loja</span><input class="inp" id="cfgNome"></label>
+              <label class="f">
+                <span>WhatsApp</span>
+                <input class="inp" id="cfgWhats" inputmode="tel" placeholder="(11) 98888-7777">
+                <small>Com DDD. O código do Brasil (55) é adicionado sozinho.</small>
+              </label>
+            </div>
             <label class="f">
-              <span>WhatsApp</span>
-              <input class="inp" id="cfgWhats" inputmode="tel" placeholder="(11) 98888-7777">
-              <small>Pode digitar com DDD e traços — o código do Brasil (55) é adicionado sozinho.</small>
+              <span>Mensagem inicial do WhatsApp</span>
+              <input class="inp" id="cfgMsg">
+              <small>Primeira frase que o cliente envia. O nome, o preço e o link do produto entram depois dela.</small>
             </label>
-          </div>
-
-          <label class="f">
-            <span>Mensagem inicial do WhatsApp</span>
-            <input class="inp" id="cfgMsg">
-            <small>O nome, o preço e o link do produto entram automaticamente depois dessa frase.</small>
-          </label>
-
-          <div class="form__row form__row--2">
-            <label class="f"><span>Frase curta (aparece acima do título)</span><input class="inp" id="cfgSlogan"></label>
             <label class="f"><span>Link do Instagram</span><input class="inp" id="cfgInsta" placeholder="https://instagram.com/sualoja"></label>
+          </section>
+
+          <section class="grupo">
+            <h3 class="grupo__titulo">Página inicial</h3>
+            <p class="grupo__desc">O destaque grande que o cliente vê logo que abre o site.</p>
+            <label class="f">
+              <span>Frase curta acima do título</span>
+              <input class="inp" id="cfgSlogan">
+            </label>
+            <label class="f"><span>Título</span><input class="inp" id="cfgHeroTitulo"></label>
+            <label class="f"><span>Texto de apresentação</span><textarea class="inp" id="cfgHeroTexto" style="min-height:80px"></textarea></label>
+          </section>
+
+          <section class="grupo">
+            <h3 class="grupo__titulo">Faixa de avisos</h3>
+            <p class="grupo__desc">A faixa roxa no topo do site, com mensagens que vão passando.</p>
+            <label class="f">
+              <span>Avisos</span>
+              <textarea class="inp" id="cfgAvisos" style="min-height:90px"></textarea>
+              <small>Um aviso por linha. Ex.: ENVIO PARA TODO O BRASIL</small>
+            </label>
+          </section>
+
+          <section class="grupo">
+            <h3 class="grupo__titulo">Rodapé</h3>
+            <p class="grupo__desc">O texto no final de todas as páginas.</p>
+            <label class="f"><span>Texto do rodapé</span><textarea class="inp" id="cfgRodape" style="min-height:80px"></textarea></label>
+          </section>
+
+          <div class="form__salvar">
+            <button class="btn btn--brand btn--lg" type="submit">Salvar dados da loja</button>
           </div>
-
-          <div class="form__row form__row--2">
-            <label class="f"><span>Título da página inicial</span><input class="inp" id="cfgHeroTitulo"></label>
-            <label class="f"><span>Texto da página inicial</span><input class="inp" id="cfgHeroTexto"></label>
-          </div>
-
-          <label class="f">
-            <span>Avisos da faixa preta (um por linha)</span>
-            <textarea class="inp" id="cfgAvisos" style="min-height:90px"></textarea>
-            <small>Ex.: ENVIO PARA TODO O BRASIL</small>
-          </label>
-
-          <label class="f"><span>Texto do rodapé</span><textarea class="inp" id="cfgRodape" style="min-height:80px"></textarea></label>
-
-          <button class="btn btn--brand btn--lg" type="submit" style="justify-self:start">Salvar dados da loja</button>
         </form>
       </section>
 
